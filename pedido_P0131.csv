@@ -1,0 +1,2 @@
+produto,data_corte,inicio_cobertura,fim_cobertura,nivel_servico,demanda_prevista,estoque_seguranca,necessidade_bruta,estoque_cd,pedido,preco_medio,modelo,modelo_convergiu,vendido_real,sobra_falta_un
+P0131,2019-10-03,2019-10-04,2019-10-31,0.938,8267.028858567357,779.0607917369726,9046.08965030433,3000.0,6046.08965030433,2.5870087124878993,"SARIMAX (2,1,2)(1,1,1,7) + promo",False,8158.0,888.0896503043296
