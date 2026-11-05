@@ -14,7 +14,8 @@ def br(valor, casas=1):
     return f"{valor:,.{casas}f}".replace(",", "X").replace(".", ",").replace("X", ".")
 
 PASTA = Path(__file__).parent
-SAIDAS = PASTA / "saidas"
+# Os CSVs ficam em saidas/; se o upload achatou as pastas, procura na raiz do repositório
+SAIDAS = PASTA / "saidas" if (PASTA / "saidas" / "pedido_P0131.csv").exists() else PASTA
 
 st.set_page_config(page_title="Pedido P0131", layout="wide")
 

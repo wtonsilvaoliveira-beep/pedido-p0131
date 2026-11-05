@@ -12,7 +12,10 @@ import politica_pedido as pp
 
 PASTA = Path(__file__).parent
 parser = argparse.ArgumentParser()
-parser.add_argument("--dados", default=PASTA / "dados" / "demanda.csv")
+DADOS_PADRAO = PASTA / "dados" / "demanda.csv"
+if not DADOS_PADRAO.exists():          # upload sem a pasta dados/: arquivo na raiz
+    DADOS_PADRAO = PASTA / "demanda.csv"
+parser.add_argument("--dados", default=DADOS_PADRAO)
 parser.add_argument("--data-corte", default="2019-10-03", help="último dia conhecido (fim do treino)")
 parser.add_argument("--estoque-cd", type=float, default=pp.ESTOQUE_CD_PADRAO)
 parser.add_argument("--nivel-servico", type=float, default=pp.NIVEL_SERVICO)
